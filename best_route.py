@@ -51,8 +51,13 @@ def main():
         "Melbourne (MEL)",
     ]
 
-    all_permutations = permutations(desired_locations)
     route_id = 1
+    routes = []
+
+    all_permutations = permutations(desired_locations)
+    
+    print("[All Possible Routes]")
+    print()
 
     for perm in all_permutations:
         full_route = [start_location] + list(perm) + [start_location]
@@ -62,6 +67,13 @@ def main():
             hours = total_duration // 60
             minutes = total_duration % 60
 
+            routes.append({
+                'id': route_id,
+                'route': full_route,
+                'total_duration': total_duration,
+                'total_price': total_price
+            })
+
             print(f"Route ID: {route_id}")
             print(f"Route: {' -> '.join(full_route)}")
             print(f"Total Duration: {hours} hours {minutes} minutes")
@@ -69,6 +81,43 @@ def main():
             print("-"*60)
 
         route_id += 1
+    
+    print()
+    print("=" * 60)
+    print()
+
+    print("[Sort by Duration]")
+    print()
+
+    routes.sort(key=lambda x: x['total_duration'])
+    for route in routes:
+        hour = route['total_duration'] // 60
+        minute = route['total_duration'] % 60
+
+        print(f"Route ID: {route['id']}")
+        print(f"Route: {' -> '.join(route['route'])}")
+        print(f"Total Duration: {hour} hours {minute} minutes")
+        print(f"Total Price: {route['total_price']:.2f}")
+        print("-"*60)
+
+    print()
+    print("=" * 60)
+    print()
+
+    print("[Sort by Price]")
+    print()
+
+    routes.sort(key=lambda x: x['total_price'])
+    for route in routes:
+        hour = route['total_duration'] // 60
+        minute = route['total_duration'] % 60
+
+        print(f"Route ID: {route['id']}")
+        print(f"Route: {' -> '.join(route['route'])}")
+        print(f"Total Duration: {hour} hours {minute} minutes")
+        print(f"Total Price: {route['total_price']:.2f}")
+        print("-"*60)
+
 
 if __name__ == "__main__":
     main()
