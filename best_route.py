@@ -65,7 +65,7 @@ def main():
             print(f"Route ID: {route_id}")
             print(f"Route: {' -> '.join(full_route)}")
             print(f"Total Duration: {hours} hours {minutes} minutes")
-            print(f"Total Price: ${total_price:.2f}")
+            print(f"Total Price: {total_price:.2f}")
             print("-"*60)
 
         route_id += 1
