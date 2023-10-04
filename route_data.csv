@@ -1,0 +1,13 @@
+From,To,Duration,Price
+Singapore (SIN),Cairns (CNS),6:40,2716
+Singapore (SIN),Sydney (SYD),7:45,1689
+Singapore (SIN),Melbourne (MEL),7:30,1605
+Cairns (CNS),Singapore (SIN),6:55,6997
+Cairns (CNS),Sydney (SYD),3:00,1224
+Cairns (CNS),Melbourne (MEL),3:25,1092
+Sydney (SYD),Singapore (SIN),8:30,3943
+Sydney (SYD),Cairns (CNS),3:05,1056
+Sydney (SYD),Melbourne (MEL),1:35,580
+Melbourne (MEL),Singapore (SIN),7:50,3888
+Melbourne (MEL),Cairns (CNS),3:25,956
+Melbourne (MEL),Sydney (SYD),1:30,652
