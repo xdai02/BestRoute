@@ -5,7 +5,7 @@ from itertools import permutations
 def graph_create():
     graph = {}
 
-    with open("route_data.csv", 'r') as file:
+    with open("data/route_data_20231203.csv", 'r') as file:
         reader = csv.reader(file)
         next(reader)
 
