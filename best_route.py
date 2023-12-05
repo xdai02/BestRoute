@@ -48,7 +48,7 @@ def main():
     desired_locations = [
         "Sydney (SYD)",
         "Cairns (CNS)",
-        "Melbourne (MEL)",
+        # "Melbourne (MEL)",
     ]
 
     route_id = 1
